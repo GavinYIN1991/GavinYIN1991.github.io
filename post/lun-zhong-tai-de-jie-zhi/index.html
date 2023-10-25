@@ -1,0 +1,275 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>论中台的价值 | 灯火阑珊处</title>
+<link rel="shortcut icon" href="http://GavinYIN1991.github.io/favicon.ico?v=1698206551042">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="http://GavinYIN1991.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140340671-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-140340671-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            灯火阑珊处
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://GavinYIN1991.github.io/post/guan-yu-wo" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    论中台的价值
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-09-13 ·
+                    </time>
+                    
+                        <a href="http://GavinYIN1991.github.io/tag/NnX4vIpp9/" class="post-tags">
+                            # 业务
+                        </a>
+                    
+                        <a href="http://GavinYIN1991.github.io/tag/t_2XgfD1Q/" class="post-tags">
+                            # 产品
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <blockquote>
+<p>产品犬校有同学提问：对于中台产品，经常会需要与上游业务产品讨论边界，中台有现成的通用能力，但是业务希望定制。某个功能谁来处理、某个信息上游是否需要感知 etc.<br>
+举例：<br>
+支付中台有静默代扣能力，但是业务希望指定扣款顺序。于是讨论中台应该修改其封装的能力，或是提供原子代扣能力让业务层自己调度。<br>
+风控中台有通用的决策能力和审核能力，但是由于审核会涉及到不同的业务流程，于是讨论风控中台是否应该剥离审核模块、由各个业务系统独立完成。</p>
+</blockquote>
+<!-- more -->
+<blockquote>
+<p>我自己的思考是，<br>
+1.从实现层面考虑：这个需求，是否能被抽象成中台能理解的逻辑？如果不能被抽象，必定依赖其余的业务逻辑，那应该就是业务系统自己做。<br>
+2.从拓展性而言，这个需求对于中台的通用性程度有多高，是否应该被泛化为中台通用能力以复用？<br>
+3.判断当前需求，由业务侧承担的实现难度有多高。<br>
+坦诚地，因为自己是作为中台产品的角色，我自认为主要受不安全感驱动，在模糊的边界地带打架时，总是希望把自己的产品做得大而全，反感提供原子能力，怕失去「往前走」的机会。但是自己也知道这个不利于系统拓展、维护以及整体的产品架构。但是一直没有很清晰的方法论去指导自己的判断原则。<br>
+另外就是这样的讨论经常非常细，且极容易深入技术层面，很多时候回头来觉得这种讨论没有多大产品价值有点浪费时间。<br>
+因此想请教群内的各位，自己作为中台/业务对接上游/下游时的思路。</p>
+</blockquote>
+<h2 id="避免重复建设-重复开发">避免重复建设、重复开发</h2>
+<p>就拿第三方支付举例，现在市面上常见的第三方支付公司由宝付、连连、通联、银联电子、京东支付、快钱、微信支付、支付宝等。如果没有中台的时候，A业务线需要第三方支付的时候，需要自己把上述的支付通道对接一遍，并处理好各种异常场景和逻辑，还有对账、差错处理、退款等；B业务线需要第三方支付的时候，也需要把上面的工作重新做一遍。</p>
+<p>这个时候中台的价值就来了，对内统一封装支付能力，包括主动支付、代扣、协议代扣、代付、退款等，提供「原子接口」接口供内部业务部门使用，对外整合各家支付通道能力，结合支付成本、可支持银行、支付能力等做路由管理。</p>
+<p>但是上述能力，需要一次性全部开发完成么？不需要！</p>
+<p>我有一个简单的判断原则就是：<strong>业务是否需要</strong>。业务都不需要的能力，我做出来给谁用呢？</p>
+<p>中台产品的角色说尴尬也尴尬，说不尴尬也不尴尬，既然公司有这个岗位和分工，那么各个业务线都依赖你，但是如果你提供的解决方案或者能力，满足不了业务部门的需求，那对方就有可能考虑另起炉灶或者自力更生。</p>
+<p>作为中台产品，我给自己的角色和定位就是「<strong>乙方</strong>」。</p>
+<h2 id="专业能力需要由专职团队提供">专业能力需要由专职团队提供</h2>
+<p>一个完整的风控中台系统包括：授信风控（授信准入、授信额度、风险定价、授信反欺诈）、贷中管理（交易风控、交易反欺诈、额度管控、定价管理、贷中预警）、贷后管理（分案策略、催收评分、渠道策略）。<br>
+这么复杂的事情，是需要有专门的风险团队负责整体的风险管理工作的。</p>
+<p>不知道为啥Patrick公司内部为啥冒出来拆分到各自业务线去完成审核的想法，但是从风控角度来说，不管是什么样的业务流程或者业务形态，需要风险介入管控的时候，根据各自业务流程在关键节点介入即可。同样风控中台提供相应的「原子接口」即可。</p>
+<h2 id="提供灵活-便捷-稳定的服务能力">提供灵活、便捷、稳定的服务能力</h2>
+<p>既然中台作为「全村的希望」，稳定肯定是第一原则，一般都是99.99%可用性。<br>
+然后对外提供的能力，其实更多是以API接口形式为主，所以对中台产品来说，具备一定的技术背景、逻辑思维、抽象能力都有助于更好地理解业务、归纳总结经验优化中台方案。<br>
+比如说我在前东家从0到1搭建设计的风控系统，不光是梳理主要的业务流程图、业务系统调用逻辑、顺序，数据上报、回传逻辑等，连接口文档都是我定义的，包括加密加签方式、各个接口的字段清单、报文格式、字典表等。</p>
+<p>以上是我做中台跟业务上下游对接的一些经验分享，做了这么多年之后，我从来没有「不安全感」，反而是越来越坚信一个好的中台方案可以节省业务的成本、提升整体效率的，这也是中台的价值和魅力所在。</p>
+<h2 id="中台的服务能力">中台的服务能力</h2>
+<blockquote>
+<p>我现在的思考方式其实是放弃了提供大而全的服务能力，改为尽量支持90%的业务免研发接入（提供封装服务）、同时支持10%高度成熟复杂的业务调度接入（提供原子能力）。</p>
+</blockquote>
+<p>这个思路没有问题。不过在评估需求优先级的时候，对中台来说，我评判标准是：<strong>合规需求 &gt; 老板需求 &gt; 业务规模 &gt; 定制需求 &gt; 通用需求</strong>。</p>
+<p>关于这几类需求，我做点解释：</p>
+<ul>
+<li>合规需求：信贷业务，合规需求肯定是第一优先级的，如果业务本身有合规性风险，那整体的可行性就大打折扣了，所以一旦出现合规性问题，都得第一时间解决，这是所有业务的基础，不然哪怕是10亿、100亿、1000亿的业务，最终都归于0，比如说之前的P2P业务；</li>
+<li>老板需求：老板亲自指示提出的需求，也许本身价值不大，但从长远利益或者公司规划战略角度上来说，有深远影响；或者说就是业务部门求情走后门之后，需要开个直通车等等；</li>
+<li>业务规模：当没有前面两种因素的干扰后，那就公平起见评判需求，比如说A业务线现在每日有10亿放款，B业务每日只有100万放款，两边都给中台提了需求，此时不用想肯定优先支持业务规模大的需求，不然老板就得弄死你。当然不是说100万业务的需求就不重要了；</li>
+<li>定制需求：中台功过均在此，前期规划再合理或者再全面，但是事与愿违或者业务本身发生了变化，原有的方案无法支持新的业务形态时，需要定制需求；要么业务部门继续按照原有方案硬兼容，要么中台积极配合改造，在这一步如何处理这类需求就决定了中台口碑的好坏了；</li>
+<li>通用需求：这种需求就是共性需求，各个部门都需要，但是实际上要支持共性需求，可能需要花费的时间和成本都非常高，业务部门等不及，只能先通过定制需求临时方案解决，业务上线后再迭代更新用更好的方案替代。</li>
+</ul>
+<p>另外，我说的「乙方」，其实是一种心态。这就是涉及到你说的「边界」问题。</p>
+<p>作为乙方，肯定是要满足甲方爸爸的需求，但是也要考虑自身能力和资源的实际情况，说白了这里面就看公司对中台的定位以及你自身的实际情况而说了。如果你觉得做起来太麻烦或者不想做，那就甩回业务部门，如果你觉得有必要或者有价值，不管该不该你做，都可以拿过来。</p>
+<h2 id="中台的抽象难题">中台的抽象难题</h2>
+<p>先说一个结论：<strong>中台部门肯定是全公司最熟悉业务的部门，没有之一。</strong></p>
+<p>因为每天都有各个业务部门给你提需求，中台作为信息流的汇集点或者说关键点，要做到对各个业务熟稔于心。<br>
+要问怎么了解业务，那就是让各个部门给你提需求之前，介绍一下业务背景、业务流程、业务规划及预期等，这就是中台逐步积累和成长快的一个点，相比起业务部门，各自只了解自己手头上的业务，对其他业务知之甚少，但中台就不一样了。</p>
+<p>中台可以接触到所有业务，在这个角色上需要有更开阔的视野和心态去面对各种挑战，以及深刻理解业务需求。</p>
+<blockquote>
+<p>中台方案越完整、这时候越不具备拓展性；越需要具备通用性、中台方案越碎片化原子化。</p>
+</blockquote>
+<p>关于这句话，我先说一下我的理解，光从字面意思，感觉咱俩的想法有偏差。</p>
+<p>先说一下「完整性」，我理解的是越完整的方案，自然就不需要拓展了。该考虑的业务场景都完备了，那需要拓展啥？不知道你想描述的是不是「耦合」。<br>
+举个例子，就拿你熟悉的第三方支付里面常见的绑卡、还款支付流程来说。</p>
+<p>常见业务流程：提供绑卡能力（传入四要素-下发验证码-鉴权通过-绑卡成功），提供还款能力（主动还款（需验短/不需验短）、到期代扣）。</p>
+<p>这个时候就有不同的中台方案了，比如说绑卡的请求入参：<br>
+A、传入用户唯一编号、银行卡号；<br>
+B、传入用户唯一编号、银行卡号、银行预留手机号；</p>
+<p>A方案就默认用户注册手机号=银行预留手机号，不支持用户有多个手机号的场景；B方案则支持绑卡时提供其他手机号；但A/B方案都有一定的业务背景存在，不一定B就比A好，具体还得根据内部实际情况而定。</p>
+<p>然后绑卡接口的返回参数也可以有N种方案，这里我就不展开讲了。</p>
+<p>说到怎么做的实操技巧，我有个经验就是「<strong>做局部最优解</strong>」。面对未来不确定性、当前时间紧迫性的情况下，如果想不出来更好的方案、或者更完美的方案需要更长的时间或者资源去满足时，那当前能快速解决实际问题的方案就是好方案。</p>
+<p>所以当我遇到这种场景时，会给业务部门画个饼，当前情况我们先按照A方案协助业务快速上线/解决问题，虽然此处会留个坑，但影响不大，后续B方案出来后可以一劳永逸解决此问题，业务部门再配合改造等等诸如此类。</p>
+<h2 id="中台产品经理的价值">中台产品经理的价值</h2>
+<p>我从16年开始做中台产品，后来又做更复杂的风控产品，到现在做业务产品（更偏商务一点）。</p>
+<p>我还记得当年刚开始做中台的时候，完全是一脸懵逼，直属领导是CTO，对我定位就是中台产品，说在阿里有一种Title叫做「业务架构师」，职责就是从更高的层面规划整体产品形态以及业务分工等，这既要求有一定的技术背景、又要求有足够的业务知识，而当时我的短板就是不熟悉业务。</p>
+<p>经过这么多年的积累和学习，从业务层面来说，我已经能够很熟练地去拆分一个业务的各个模块，搞清楚整体业务流程以及各自的边界及分工。</p>
+<p>这就是潜移默化的成长，而我的心态就是「多学点，总没坏处」，另外「别对自己设边界」，这里既是自己工作内容的边界也是自己未来发展的边界。</p>
+<p>比如说我们梳理一个业务逻辑，需要用到的工具就是【泳道图】，想画好泳道图的前提条件就是对业务细节和角色、系统分工足够了解和熟悉；比如说接口对接层面的各种顺序和判断，我们就需要用到【时序图】，但这个对技术知识上会有一点挑战，如果你去了解一下，其实并不难，但如果你能把这个也画出来，在需求评审上研发肯定会更尊重你一点；业务逻辑上，如何判断，通过什么来判断，如果你能读懂上下游的接口文档，搞清楚这些逻辑，甚至当你能自己定义这些字段或者逻辑时，是不是能力上又上了一个台阶？</p>
+<p>当然你也可以说，这些事情交给架构师、研发去做。但如果你多做一点呢？价值和意义不就体现出来了么。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="http://GavinYIN1991.github.io/post/shu-ju-chan-pin-xue-sheng-ren-zheng-fu-wu/" class="post-title gt-a-link">
+                    数据产品-学生认证服务
+                </a>
+            </div>
+        
+
+        
+            
+
+            
+                <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'yinshihao-com',
+  apikey: 'STUxhSzvChWZgaLOthu1C1BULSIOeRMTAo8Mw8FEIOD7MYJbFMSAZPszSL7Gy6bj',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+            
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">古今之成大事业、大学问者，必经过三种之境界：
+<br>  “昨夜西风凋碧树，独上高楼，望尽天涯路。” 此第一境也。
+<br> “ 衣带渐宽终不悔，为伊消得人憔悴。” 此第二境也。 
+<br> “ 众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。”此第三境也。</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/GavinYIN1991" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/littleHuaManLou" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://www.facebook.com/gavinyin1991" target="_blank">
+                    <i class="fab fa-facebook gt-c-content-color-first"></i>
+                </a>
+            
+        
+    </div>
+    ©2020 灯火阑珊处
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="http://GavinYIN1991.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+</div>
+</body>
+</html>

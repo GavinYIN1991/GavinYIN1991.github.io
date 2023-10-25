@@ -1,0 +1,243 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>第三方爬虫发家简史 | 灯火阑珊处</title>
+<link rel="shortcut icon" href="http://GavinYIN1991.github.io/favicon.ico?v=1698206551042">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="http://GavinYIN1991.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140340671-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-140340671-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            灯火阑珊处
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://GavinYIN1991.github.io/post/guan-yu-wo" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    第三方爬虫发家简史
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2019-11-24 ·
+                    </time>
+                    
+                        <a href="http://GavinYIN1991.github.io/tag/NnX4vIpp9/" class="post-tags">
+                            # 业务
+                        </a>
+                    
+                        <a href="http://GavinYIN1991.github.io/tag/D-lIDPvsB/" class="post-tags">
+                            # 现金贷
+                        </a>
+                    
+                        <a href="http://GavinYIN1991.github.io/tag/oqm_vRLfk/" class="post-tags">
+                            # 风控
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>2019年9月6日下午16:00点左右，突然发现杭州某知名爬虫供应商的服务异常报错「504」，微信对接群里询问，超过其正常三分钟响应时效，一反常态，无人回应。</p>
+<p>随后，有人爆料「xx出事儿了，刚刚去了警察，绿城西溪国际楼下全是警车」</p>
+<p>谁能想到，杭州西湖区的一家爬虫公司，突发性被警方上门，竟然可以在接下来的两周内引起整个互金圈的一场龙卷风。</p>
+<p>如果说2017年12月的141号文，是国内现金贷行业发展的分水岭，那2019年9月以杭州西湖这家公司出事儿，算是另外一个分界点了。</p>
+<!-- more -->
+<h1 id="01-个人征信政策利好">01 个人征信政策利好</h1>
+<blockquote>
+<p>2015年1月，人民银行印发《关于做好个人征信业务准备工作的通知》，允许8家公司开展第一批个人征信试点业务。其中包括芝麻信用、腾讯征信、深圳前海征信、鹏元征信、中诚信征信、中智诚征信、拉卡拉信用、北京华道征信。</p>
+</blockquote>
+<p>以拥抱变化著称的阿里巴巴响应政策速度最快，同年1月28日，芝麻信用分正式上线。自打央妈的通知下发后，虽然当时只有这八家钦点的公司试点运营业务，但是整个行业都沸腾了，一幅热火朝天欣欣向荣蓬勃发展的样子，言必谈美国三大信用公司Equifax、Experian、TransUnion。虽然当时监管的意图和政策也尚未明确，但是市场上已经在猜测和分析日后可能会出现「支付牌照」一样稀缺的「个人征信牌照」。毕竟当时支付牌照的价格水涨船高，大家是有目共睹的，同理征信牌照的稀缺性和未来潜在价值，大可发挥想象空间。</p>
+<p>估计当年很多老板将「中国版FICO」作为公司今后重要的发展方向和定位，于是很多数据公司如雨后春笋一般，试图想借着政策利好的大趋势，努力发展得到监管的认可，能够进入下一批试点准备单位。</p>
+<p>当然这里需要注意的是，很多并不是「大数据公司」，只是「数据公司」。</p>
+<h1 id="02-paydayloan小额现金贷">02 PaydayLoan小额现金贷</h1>
+<p>国内互联网金融发展应该是从 2007 年国内首家 P2P 网贷平台成立算起，然后大佬们陆续入场-增长爆发-非法集资-跑路暴雷，<strong>以 2015 年e租宝立案调查为行业发展分界点</strong>。本来各方媒体都在唱衰P2P，认为这种高收益的模式已经玩不下去了，早晚要出现「暴雷潮」。哪知道，直到 2018 年才陆陆续续有知名P2P平台跑路、延期承兑等现象出现。究其原因，毕竟要知道当时圈内共识「<strong>PaydayLoan 小额现金贷是 P2P 最好的资产</strong>」。</p>
+<p>时间拉回到2014年，那一年 PaydayLoan 发薪日贷款模式引入中国，在 2016 年得到了爆发和增长，各方大佬入场做起了现金贷，行业一派祥和，哪想到在 2017年底某知名上市公司创始人尚未参透中国古话「闷声发大财」的真谛，在实业经济举步维艰、大家需要勒紧裤腰带过日子的时候，居然说出来「欠的钱可以不用还」，迅速引起了监管的注意，然后一纸令下，一地鸡毛。</p>
+<p>2014年成立的<strong>现金巴士</strong>是行业内公认的最早的现金贷平台，2016年是公认的现金贷爆发元年，这一年同盾、百融早已是金融科技圈的江湖大哥地位，同年也有很多日后耳熟能详的后起之秀才初出茅庐。</p>
+<h1 id="03-风卷残云-白云苍狗">03 风卷残云 白云苍狗</h1>
+<p>2017年上半年，整个行业风风火火。火到什么程度，某知名现金贷商务总监，非常惭愧地给我说，公司月放款20亿，排不进上海本土互金公司前十。</p>
+<blockquote>
+<p>关于现金贷的市场规模，目前并没有一个准确的数字，一方面是由于没有一个公认的监测平台可以掌握全面的数据，另一方面是由于现金贷公司越来越多地以更加隐蔽的方式在区域运营。较为公认的说法是，规模最大时，现金贷行业拥有万亿级市场，5000-10000家参与平台。根据一本智库不完全统计，<strong>规模最大时，头部现金贷公司月均放款量在100亿元左右，至少有近百家公司的月均放款量在10亿元左右。</strong></p>
+</blockquote>
+<p>市场繁荣，带动了整个产业链上下游的飞速发展，以今日头条为代表的获客渠道、以融360金融为代表的贷款超市、以同盾百融为代表的第三方数据源供应商、以通联宝付为代表的第三方支付通道，形势一片大好。</p>
+<h1 id="04-我们只是大数据的搬运工">04 我们只是大数据的「搬运工」</h1>
+<blockquote>
+<p>地有多大产，人有多大胆。</p>
+</blockquote>
+<p>当时小额现金贷一下子爆发起来，离不开这些第三方数据供应商的支持。小额现金贷的目标客群，与传统银行的客群不一样，银行不屑于给征信白户提供信贷服务的这部分客群，在PDL看来就是香饽饽。</p>
+<p>当然不论是银行还是现金贷公司，都面临一个问题，如何给这部分征信白户做授信准入呢？回到最开始提到的大数据，其中就包含了运营商、QQ社交数据，公积金、社保、学信网政务数据，信用卡账单、网银消费数据，支付宝、京东电商数据等等。</p>
+<p>正常来说，这些数据的输出和加工都需要对应的厂商授权和用户授权才能拿到，但是架不住聪明的各路大神，利用客户想借钱的心态，采取账号和密码强授权的方式，利用爬虫技术模拟登录后获取到相关信息，并加工输出给现金贷平台。</p>
+<blockquote>
+<p>中国的消费者在隐私保护的前提下，很多时候是愿意以一定的个人数据授权使用，去换取更加便捷的服务。——李彦宏</p>
+</blockquote>
+<p>李厂长也是个耿直boy，瞎说了一句大实话。</p>
+<p>我个人把国内数据服务厂商分为几类：一类是家大业大的自有体系数据输出比如芝麻信用、国政通、天翼征信、联通大数据，一类是白手起家实干派的爬虫服务输出比如魔蝎、白骑士、聚信立、富数、公信宝，一类是给政府提供系统服务看见市场这么火热也想分一杯羹的某些科技公司，一类是啥也没有但是有关系的二道贩子代理商。</p>
+<p>虽然这些爬虫服务商也知道自己这么做是有风险，但是看到大家都这么做，警察叔叔也没管，好像就应该没事儿吧？所以大家就闷声发大财继续做下去了。</p>
+<p>据坊间传闻，事发东窗的不是杭州西湖那家公司本身的问题，是服务的客户用了爬虫提供的原始数据去暴力催收，导致客户自杀身亡，警方从而拔出萝卜带出泥。</p>
+<p>所以一番血雨腥风之后，现在市场一地鸡毛，人人自危。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="http://GavinYIN1991.github.io/post/hertz/" class="post-title gt-a-link">
+                    Hertz 一生黑
+                </a>
+            </div>
+        
+
+        
+            
+
+            
+                <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'yinshihao-com',
+  apikey: 'STUxhSzvChWZgaLOthu1C1BULSIOeRMTAo8Mw8FEIOD7MYJbFMSAZPszSL7Gy6bj',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+            
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">古今之成大事业、大学问者，必经过三种之境界：
+<br>  “昨夜西风凋碧树，独上高楼，望尽天涯路。” 此第一境也。
+<br> “ 衣带渐宽终不悔，为伊消得人憔悴。” 此第二境也。 
+<br> “ 众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。”此第三境也。</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/GavinYIN1991" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/littleHuaManLou" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://www.facebook.com/gavinyin1991" target="_blank">
+                    <i class="fab fa-facebook gt-c-content-color-first"></i>
+                </a>
+            
+        
+    </div>
+    ©2020 灯火阑珊处
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="http://GavinYIN1991.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+</div>
+</body>
+</html>
